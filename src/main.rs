@@ -1,6 +1,9 @@
 use std::env;
 use std::io::{self, Write};
 
+extern crate clap;
+use clap::{Arg, App};
+
 mod modes;
 use modes::*;
 
@@ -37,6 +40,19 @@ enum NcMode {
 }
 
 fn main() {
+
+    let matches = App::new("nc")
+                          .version("0.1")
+                          .author("nobody <nobody@gmail.com>")
+                          .about("Concatenate and redirect sockets")
+                          .args_from_usage(
+                              "-l, --listen 'Turn on listening mode'
+                              -u, --udp     'Use UDP on transport layer'
+                              <hostname>    'target hostname or ip address'
+                              <port>        'specify port'")
+                          .get_matches();
+
+    return;
 
     let mut args = env::args().skip(1);
     let mut hostname = "".to_string();

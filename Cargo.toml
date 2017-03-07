@@ -1,6 +1,8 @@
 [package]
+authors = ["Martin Sehnoutka <msehnout@redhat.com>"]
 name = "netcat"
 version = "0.1.0"
-authors = ["Martin Sehnoutka <msehnout@redhat.com>"]
 
 [dependencies]
+clap = "2.20.5"
+slog = "1.5.2"
