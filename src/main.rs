@@ -7,6 +7,9 @@ use clap::{Arg, App};
 mod modes;
 use modes::*;
 
+mod config;
+use config::*;
+
 static MAN_PAGE: &'static str = /* @MANSTART{nc} */ r#"
 NAME
     nc - Concatenate and redirect sockets
