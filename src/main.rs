@@ -4,6 +4,9 @@ use clap::App;
 mod modes;
 use modes::*;
 
+mod config;
+use config::*;
+
 enum TransportProtocol {
     Tcp,
     Udp,
