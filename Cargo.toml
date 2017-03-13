@@ -5,4 +5,3 @@ version = "0.1.0"
 
 [dependencies]
 clap = "2.20.5"
-slog = "1.5.2"
